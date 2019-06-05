@@ -50,7 +50,9 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="#pablo">Panel</a>
+            <a class="navbar-brand" href="#pablo">
+              @yield('navbar-title')
+            </a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -67,8 +69,8 @@
               </li>
               <!-- your navbar here -->
               <li class="nav-item">
-                <a class="nav-link" href="#pablo">
-                  <i class="material-icons">alarm</i> Iniciar sesión
+                <a class="nav-link" href="{{ route('login') }}">
+                  <i class="material-icons">account_circle</i> Iniciar sesión
                 </a>
               </li>
             </ul>
@@ -79,6 +81,7 @@
       <div class="content">
         <div class="container-fluid">
           <!-- your content here -->
+          @yield('content')
         </div>
       </div>
       <footer class="footer">
